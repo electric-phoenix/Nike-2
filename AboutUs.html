@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>About Us</title>
+        <link rel="icon" type="image/x-icon" href="images/favicon.png">
+        <link href="about.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body class="about">
+        <div class="outer-box">
+            <h1 class="about-text">About Us</h1>
+            <div class="about-description">
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
+                    eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                    voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                    voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+                    velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut
+                    enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+                    consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+                    vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p> 
+            </div>  
+            <button class="toggle" onclick="toggle()">FAQ</button> <!--FAQ Button-->
+            <div id="faq" class="faq">
+                <button class="accordion">Question ?</button> <!--Question 1 Accordion-->
+                <div class="panel"> <!--Answer 1 -->
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                
+                <button class="accordion">Question ?</button> <!--Question 2 Accordion-->
+                <div class="panel"> <!--Answer 2 -->
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                
+                <button class="accordion">Question ?</button> <!--Question 3 Accordion-->
+                <div class="panel"> <!--Answer 3 -->
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+            
+        </div>
+        
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+            //accordion for FAQ
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                }
+                else {
+                    panel.style.display = "block";
+                }
+            });
+            }
+            //toggle function for FAQ
+            function toggle() {
+                var x = document.getElementById("faq");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+        </script>
+    </body>
+</html>
