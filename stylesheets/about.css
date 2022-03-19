@@ -65,8 +65,12 @@
 
 /* Accordion - Each question */
 .accordion {
-	background-color: #eee;
-	color: #444;
+	background-color: #a6a6a6;
+	color: #262626
+	10% 		 #1a1a1a
+	5% 		 #0d0d0d
+	0% 		 #000000
+	;
 	cursor: pointer;
 	padding: 18px;
 	width: 100%;
@@ -78,7 +82,7 @@
 }
   
 .active, .accordion:hover {
-background-color: #ccc; 
+background-color: #8c8c8c; 
 }
 
 /* Accordion opening panel */
@@ -86,7 +90,7 @@ background-color: #ccc;
 padding: 0 18px;
 font-size: 20px;
 display: none;
-background-color: white;
+background-color: #d9d9d9;
 overflow: hidden;
 }
 
