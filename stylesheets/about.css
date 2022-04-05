@@ -103,3 +103,32 @@ overflow: hidden;
 	border-radius: 20px;
 	font-weight: bold;
 }
+
+/*Navigation Bar*/
+.topnav {
+	overflow: hidden;
+	background-color: #333;
+	position:absolute;
+	left: 0%;
+	top: 1%;
+	width: 100%;
+  }
+  
+  .topnav a {
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+  }
+  
+  .topnav a:hover {
+	background-color: #ddd;
+	color: black;
+  }
+  
+  .topnav a.active {
+	background-color: cornflowerblue;
+	color: white;
+  }
