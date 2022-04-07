@@ -18,3 +18,11 @@ schema name 'shoedata' and table name is 'shoes'
 
 url = "jdbc:mysql://database-1.cdh305awjour.eu-west-1.rds.amazonaws.com:3306/shoedata"
 user = "admin"  password = "ee417web"/>
+
+
+CREATE TABLE `contactus` (
+  `fname` varchar(45) NOT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `country` varchar(45) DEFAULT 'Ireland',
+  `subject` varchar(200) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
