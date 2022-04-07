@@ -33,7 +33,7 @@
 
     <hr>
 
-    <button type="submit" class="loginbtn">Login</button>
+    <button onclick="checkPassword()" type="submit" class="loginbtn">Login</button>
 
 
 </form>
@@ -47,6 +47,17 @@
   
   function closeNav() {
     document.getElementById("myNav").style.height = "0%";
+  }
+  function checkPassword(){
+    var x = document.getElementById("psw").value;
+    var y = document.getElementById("email").value;
+    var numbers = /[0-9]/;
+    if (x == "" || y == "") {
+    alert("Both email and password must be filled out.");
+    }
+    else if(!numbers.test(x) && (x != "")){
+      alert("Your password is weak.You may want to add a number to your password.")
+    }
   }
   </script>
 
