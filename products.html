@@ -4,20 +4,18 @@
   <meta charset="UTF-8">
   <title>Products</title>
   <link rel="stylesheet" href="accounts.css">
+  <script>
+  function submitForm() {
+	     document.getElementById("shoe").submit();
+	}
+</script>
 </head>
 <body>
 
-  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
-  <div id="myNav" class="AccountNav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <div class="overlay-content">
-      <a href="Index.html">HOME</a>
-      <a href="products.html">PRODUCTS</a>
-      <a href="Contact.html">CONTACT</a>
-      <a href="AboutUs.html">ABOUT US</a>
-    </div>
-  </div>
-  
+<div class="navbar" id="navbar">
+  <a href="index.html">Home</a>
+  <a href="Accounts.html">Account Login</a>
+</div>
 
 <div class = "row">
 
@@ -26,15 +24,15 @@
     <div class = "container">
       <div class = "card" style="text-align: left; margin-left: 10px">
         <div style = "margin-left: 5%">
-    <form action="productsel">
+    <form id="shoe" action="ResponseServlet" onclick = submitForm()>
       <br>
 
       <p>Select Shoe Type</p>
-       <input type="radio" id="men" name="type" value="men">
+       <input type="radio" id="men" name="type" value="men" >
        <label for="men">Men</label><br>
-       <input type="radio" id="women" name="type" value="women">
+       <input type="radio" id="women" name="type" value="women" >
        <label for="women">Women</label><br>
-       <input type="radio" id="kids" name="type" value="kids">
+       <input type="radio" id="kids" name="type" value="kids" >
        <label for="kids">Kids</label>
 
       <br>
@@ -44,7 +42,7 @@
       <label for="nike">Nike</label><br>
       <input type="radio" id="puma" name="brand" value="puma">
       <label for="puma">Puma</label><br>
-      <input type="radio" id="newbalance" name="brand" value="newbalance">
+      <input type="radio" id="newbalance" name="brand" value="new balance">
       <label for="newbalance">New Balance</label>
 
       <br>
@@ -70,7 +68,7 @@
   <div class="cardcolumn">
     <div class="card">
       <h3 class = "product">Air Max</h3>
-      <img src="images/airforce1.PNG" alt="Air Max" style="width:100%">
+      <img src="images/airforce1.PNG" alt="Air Max" style="width:100%; height:150px">
       <p class="price">$19.99</p>
       <p class = "info">Nike White Air Max</p>
       <p><button class ="AddToCart">Add to Cart</button></p>
@@ -79,20 +77,20 @@
 
   <div class="cardcolumn">
     <div class="card">
-      <h3 class = "product">Air Max</h3>
-      <img src="images/airforce1.PNG" alt="Air Max" style="width:100%">
-      <p class="price">$19.99</p>
-      <p class = "info">Nike White Air Max</p>
+      <h3 class = "product">Nitro SP</h3>
+      <img src="images/nitrosp.png" alt="Nitro SP" style="width:100%; height:150px">
+      <p class="price">$100</p>
+      <p class = "info">Puma Nitro SP</p>
       <p><button class ="AddToCart">Add to Cart</button></p>
     </div>
   </div>
 
   <div class="cardcolumn">
     <div class="card">
-      <h3 class = "product">Air Max</h3>
-      <img src="images/airforce1.PNG" alt="Air Max" style="width:100%">
-      <p class="price">$19.99</p>
-      <p class = "info">Nike White Air Max</p>
+      <h3 class = "product">New Balance</h3>
+      <img src="images/freshfoam.png" alt="Fresh Foam" style="width:100%; height:150px">
+      <p class="price">$50</p>
+      <p class = "info">New Balance Fresh Foam</p>
       <p><button class ="AddToCart">Add to Cart</button></p>
     </div>
   </div>
@@ -100,7 +98,7 @@
   <div class="cardcolumn">
   <div class="card">
     <h3 class = "product">Air Max</h3>
-    <img src="images/airforce1.PNG" alt="Air Max" style="width:100%">
+    <img src="images/airforce1.PNG" alt="Air Max" style="width:100%;height:150px">
     <p class="price">$19.99</p>
     <p class = "info">Nike White Air Max</p>
     <p><button class ="AddToCart">Add to Cart</button></p>
@@ -151,16 +149,6 @@
 
   </div>
 </div>
-
-<script>
-  function openNav() {
-    document.getElementById("myNav").style.height = "100%";
-  }
-  
-  function closeNav() {
-    document.getElementById("myNav").style.height = "0%";
-  }
-</script>
 
 </body>
 </html>
