@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +22,7 @@
 
 <div class="center">
 <div class="container">
-<form action="login">
+<form action="login" method="post" action="login">
     <h1>Login</h1>
     <p>Please fill in this form to login to your account!</p>
     <hr>
@@ -35,9 +37,15 @@
 
     <button onclick="checkPassword()" type="submit" class="loginbtn">Login</button>
 
-
+   <a href="register"> Click here to register our website </a>
 </form>
+
 </div>
+<%
+String login_msg=(String)request.getAttribute("error");  
+if(login_msg!=null)
+out.println("<font color=red size=20px>"+login_msg+"</font>");
+%>
 </div>
 
 <script>
@@ -48,7 +56,6 @@
   function closeNav() {
     document.getElementById("myNav").style.height = "0%";
   }
-  //check for submitted information
   function checkPassword(){
     var x = document.getElementById("psw").value;
     var y = document.getElementById("email").value;

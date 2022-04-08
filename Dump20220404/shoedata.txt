@@ -1,0 +1,28 @@
+CREATE TABLE `shoes` (
+  `idshoes` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) DEFAULT NULL,
+  `size` int DEFAULT NULL,
+  `type` enum('men','women','kids') DEFAULT NULL,
+  `volume` int DEFAULT NULL,
+  `brand` varchar(45) DEFAULT NULL,
+  `picture` varchar(20) DEFAULT NULL,
+  `category` varchar(20) DEFAULT NULL,
+  `price` float DEFAULT NULL,
+  PRIMARY KEY (`idshoes`),
+  UNIQUE KEY `idshoes_UNIQUE` (`idshoes`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci KEY_BLOCK_SIZE=16
+
+
+Access the database directly from below aws link to view data and make any changes
+schema name 'shoedata' and table name is 'shoes'
+
+url = "jdbc:mysql://database-1.cdh305awjour.eu-west-1.rds.amazonaws.com:3306/shoedata"
+user = "admin"  password = "ee417web"/>
+
+
+CREATE TABLE `contactus` (
+  `fname` varchar(45) NOT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `country` varchar(45) DEFAULT 'Ireland',
+  `subject` varchar(200) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci

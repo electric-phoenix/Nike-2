@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,13 +22,15 @@
 
 <div class="center">
 <div class="container">
-<form action="login">
+<form action="register" method="post" action="register">
     <h1>Login</h1>
-    <p>Please fill in this form to login to your account!</p>
+    <p>Please fill in this form to register!</p>
     <hr>
-
+     <label for="email"><b>Name</b></label>
+    <input type="text" placeholder="Enter name" name="name" id="name" required>
     <label for="email"><b>Email</b></label>
     <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
 
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
@@ -35,9 +39,28 @@
 
     <button onclick="checkPassword()" type="submit" class="loginbtn">Login</button>
 
-
+   
 </form>
 </div>
+<%
+String name=(String)request.getAttribute("name");
+String password=(String)request.getAttribute("password");
+String email=(String)request.getAttribute("email");  
+if((name!=null)&&(password!=null)&&(email!=null))
+{
+	
+out.println("<font color=black size=8px>" +" Welcome to our website: "+name+"</font>");
+out.println("<font color=black size=8px>" +" Your email: "+email+"</font>");
+out.println("<font color=black size=8px>" +" Your password: "+password+"</font>");
+   
+} else{ 
+%>
+     
+     <h2>  Register our website to be exclusive member of the society  </h2>
+   <%
+    }
+  %>
+  <h2>    <a href="products">Click here to see our products</a>  </h2>
 </div>
 
 <script>
@@ -45,10 +68,9 @@
     document.getElementById("myNav").style.height = "100%";
   }
   
-  function closeNav() {
+    function closeNav() {
     document.getElementById("myNav").style.height = "0%";
   }
-  //check for submitted information
   function checkPassword(){
     var x = document.getElementById("psw").value;
     var y = document.getElementById("email").value;
